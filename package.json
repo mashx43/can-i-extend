@@ -1,5 +1,5 @@
 {
-	"name": "can-i-extend",
+	"name": "@mash43/can-i-extend",
 	"version": "0.1.0",
 	"description": "A lightweight TypeScript library to check if a given URL is available for Chrome extension features.",
 	"author": "mash43",
