@@ -4,6 +4,7 @@
 	"description": "A lightweight TypeScript library to check if a given URL is available for Chrome extension features.",
 	"author": "mash43",
 	"license": "MIT",
+	"private": false,
 	"homepage": "https://github.com/mashx43/can-i-extend#readme",
 	"repository": {
 		"type": "git",
@@ -20,8 +21,19 @@
 		"access": "public"
 	},
 	"type": "module",
-	"module": "index.ts",
-	"private": true,
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.mts",
+	"exports": {
+		".": {
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.cjs",
+			"types": "./dist/index.d.mts"
+		}
+	},
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"build": "tsdown",
 		"test": "bun test",
